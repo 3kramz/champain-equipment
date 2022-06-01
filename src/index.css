@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.nav-custom-font{
+    font-family: industry,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: .833em;
+    font-weight: 700;
+    font-size: 1em;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+}
