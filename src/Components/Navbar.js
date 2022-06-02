@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import Logo from './Logo'
 
 const Navbar = () => {
-    const user = true
+    const user = false
     const li = <>
         <li><NavLink to="/home">HOME</NavLink></li>
         <li><Link to="/home#services">SERVICES</Link></li>
