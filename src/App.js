@@ -3,6 +3,8 @@ import './App.css';
 import Navbar from './Components/Navbar';
 import PublicRoutes from './Routes/PublicRoutes';
 import Dashboard from './Pages/Dashboard/Dashboard';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
 
