@@ -7,7 +7,7 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 function App() {
 
   return (
-    <div className=" " >
+    <div className=" bg-white" >
       <Navbar />
       
       {<Routes>
