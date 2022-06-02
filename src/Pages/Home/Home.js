@@ -4,6 +4,7 @@ import Contacts from './Contacts';
 import Footer from './Footer';
 import MiniNav from './MiniNav';
 import Reviews from './Reviews/Reviews';
+import Summary from './Summary';
 import Tools from './Tools.js/Tools';
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
              <Banner/>
              <MiniNav/>
              <Tools/>
+             <Summary/>
              <Reviews/>
              <Contacts/>
              <Footer/>
