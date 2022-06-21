@@ -1,14 +1,21 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import Logo from './Logo'
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from "../firebase.init"
+import Loading from './Loading';
+
 
 const Navbar = () => {
-    const user = false
+    const [user, loading] = useAuthState(auth);
+
     const li = <>
         <li><NavLink to="/home">HOME</NavLink></li>
         <li><Link to="/home#services">SERVICES</Link></li>
         <li>{user ? <NavLink to="/dashboard">DESHBOARD</NavLink> : <NavLink to="/login">LOGIN</NavLink>}</li>
     </>
+
+if(loading){return <Loading/>}
 
     return (
         <div class="navbar bg-accent lg:px-12 nav-custom-font">
