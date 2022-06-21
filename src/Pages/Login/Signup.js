@@ -1,12 +1,31 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import Loading from '../../Components/Loading'
 
 const Signup = () => {
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading
+      ] = useCreateUserWithEmailAndPassword(auth);
+      const [updateProfile, updating] = useUpdateProfile(auth);
 
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    if(loading || updating){
+        return <Loading/>
+    }
+    const onSubmit =async data =>{
+        await createUserWithEmailAndPassword(data.email, data.password)
+        await updateProfile({ displayName : data.displayName });
+    };
 
+
+if(user ){
+    return <Navigate to="/" replace={true} />
+}
 
     return (
         <div class="hero h-screen bg-[url(https://i.ibb.co/276tBPq/instruments-electrical-repair.jpg)]">
@@ -26,7 +45,7 @@ const Signup = () => {
                             <input
                                 type="text"
                                 placeholder="Name"
-                                {...register("name", {required: true })}
+                                {...register("displayName", {required: true })}
                                 class="input input-bordered" />
 
                             <label  className="label">
