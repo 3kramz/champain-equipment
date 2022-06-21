@@ -4,12 +4,14 @@ import { Link, Navigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import Loading from '../../Components/Loading'
+import swal from 'sweetalert';
 
 const Signup = () => {
     const [
         createUserWithEmailAndPassword,
         user,
-        loading
+        loading,
+        error,
       ] = useCreateUserWithEmailAndPassword(auth);
       const [updateProfile, updating] = useUpdateProfile(auth);
 
@@ -17,6 +19,7 @@ const Signup = () => {
     if(loading || updating){
         return <Loading/>
     }
+
     const onSubmit =async data =>{
         await createUserWithEmailAndPassword(data.email, data.password)
         await updateProfile({ displayName : data.displayName });
@@ -26,6 +29,12 @@ const Signup = () => {
 if(user ){
     return <Navigate to="/" replace={true} />
 }
+
+if (error) {
+    swal("Failed to Sign up", `${error}`, "error");
+}
+
+
 
     return (
         <div class="hero h-screen bg-[url(https://i.ibb.co/276tBPq/instruments-electrical-repair.jpg)]">
