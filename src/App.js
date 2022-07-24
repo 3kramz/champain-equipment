@@ -1,44 +1,54 @@
-import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import AdminRoutes from './Routes/AdminRoutes';
-import Navbar from './Components/Navbar';
-import PublicRoutes from './Routes/PublicRoutes';
-import Dashboard from './Pages/Dashboard/Dashboard';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useAuthState } from 'react-firebase-hooks/auth';
+import { Route, Routes } from 'react-router-dom';
 import auth from './firebase.init';
-import useRole from './Role/useRole';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import Navbar from './Components/Navbar';
+import AdminRoutes from './Routes/AdminRoutes';
+import PublicRoutes from './Routes/PublicRoutes';
+import PrivateRoute from './Routes/PrivateRoutes';
+import RequireUser from './Authentication/RequireUser';
+import RequireAdmin from './Authentication/RequireAdmin';
+import Dashboard2 from './Pages/Dashboard/Dashboard2';
 import Loading from './Components/Loading';
+import { useDispatch } from 'react-redux';
+import { setUserInfo, setUserRole } from './Redux/Actions/userActions';
+import useRole from './hooks/useRole';
+import { useEffect } from 'react';
 
 function App() {
-
+  const dispatch = useDispatch();
   const [user, loading] = useAuthState(auth);
-  const role = useRole(user?.email)
-  if (loading) { return <Loading /> }
 
+  const [role] = useRole(user);
+  
+  useEffect(() => {
+    dispatch(setUserRole(role));
+    dispatch(setUserInfo(user));
+  }, [role, user, dispatch])
+
+
+  if (loading) { return <Loading /> }
   return (
     <div className=" bg-white" >
       <Navbar />
 
-      {<Routes>
-
+      <Routes>
+        {/* -----------------------------Public routes------------------------------------------ */}
         {PublicRoutes.map(({ Component, path }) => <Route element={<Component />} path={path} />)}
 
+        <Route path="/dashboard" element={<Dashboard2 />}>
 
-        <Route path="/dashboard" element={<Dashboard />}>
-          {role==="admin"?
-          AdminRoutes?.map(({path, Component} )=> <Route path={`/dashboard/${path}`} element={< Component/>} /> )
-          :
-          PublicRoutes?.map(({path, Component} )=> <Route path={`/dashboard/${path}`} element={< Component/>} /> )
+          {/* -----------------------------Admin routes------------------------------------------ */}
+          {role === "admin" && AdminRoutes?.map(({ path, Component }) => <Route path={`${path}`} element={<RequireAdmin>< Component /></RequireAdmin>} />)}
 
-           }
-          
+          {/* -----------------------------Private routes------------------------------------------ */}
+          {role === "user" && PrivateRoute?.map(({ path, Component }) => <Route path={`${path}`} element={<RequireUser>< Component /></RequireUser>} />)}
 
         </Route>
-
-      </Routes>}
-
+        
+      </Routes>
     </div>
   );
 }

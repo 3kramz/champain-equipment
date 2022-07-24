@@ -7,28 +7,18 @@ import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import swal from 'sweetalert';
 
 
+
 const Login = () => {
-    const [
-        signInWithEmailAndPassword,
-        user,
-        loading,
-        error
-    ] = useSignInWithEmailAndPassword(auth);
+
+    const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
     const { register, handleSubmit, formState: { errors } } = useForm();
-
-    if (loading) { return <Loading /> }
-
-    const onSubmit = data => {
-        signInWithEmailAndPassword(data.email, data.password)
-    };
-    if (user) {
-        return <Navigate to="/" replace={true} />
-    }
-
-    if (error) {
-        swal("Failed to log in", `${error}`, "error");
-    }
-
+  
+    if (loading) return <Loading />
+    if (error) swal("Failed to log in", `${error}`, "error");
+    
+    const onSubmit = data => signInWithEmailAndPassword(data.email, data.password)
+    
+    if (user) return <Navigate to="/" replace={true} />
 
     return (
         <div class="hero h-screen bg-[url(https://i.ibb.co/3SmRc1y/banner.webp)]">
