@@ -30,12 +30,18 @@ const Dashboard = () => {
                     <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
                         {/* <!-- Sidebar content here --> */}
 
+
+                        
+
+
+
+
                         {/* User Contents */}
                         {role === "user" && <>
-                            <li><Link to="/dashboard">Profile</Link></li>
-                            <li><Link to="/dashboard/review">Reviews</Link></li>
-                            <li><Link to="/dashboard/my-history">History</Link></li>
+                            <li><Link to="/dashboard">My Address</Link></li>
                             <li><Link to="/dashboard/my-orders">My Order</Link></li>
+                            <li><Link to="/dashboard/track-order">Track Your Order</Link></li>
+                            <li><Link to="/dashboard/account-details">Account Details</Link></li>
                             <li><button onClick={() => {signOut(auth);   navigate("/login")} }>Log out</button></li>
                         </>}
 
