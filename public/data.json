@@ -3,240 +3,291 @@
         "img": "https://i.ibb.co/zPzyctL/chainbaw-removebg-preview.png",
         "name": "18-inch 45cc Chainsaw",
         "description": "Champion’s 18-inch 45cc Portable Gas Chainsaw is designed to take care of your heavy-duty cutting needs with power, reliability and speed. Featuring anti-vibration engine mounts and a low-kickback chain, this powerful tool will help you get the job done safely and efficiently.",
-        "price":300,
-        "stock":200,
-        "minOrder":50,
-        "ratings":4.5,
-        "sold":120
-
+        "price": 300,
+        "stock": 200,
+        "minOrder": 50,
+        "ratings": 4.5,
+        "sold": 120
     },
     {
         "img": "https://i.ibb.co/n0t4f8p/Circular-saw-removebg-preview.png",
-        "name":"Champion Circular Saw, 7-1/4-Inch, Cordless (CMCS550B)",
+        "name": "Champion Circular Saw, 7-1/4-Inch, Cordless (CMCS550B)",
         "description": "CHAMPION Electric brake of the corded circular saw stops the blade after trigger is released.Champion 7 1/4 circular saw is among the lightest saws in its class (8.8 lbs.). 15 amp motor of the compact circular saw delivers power for even the toughest applications. 57degree beveling capacity with stops at 45 degree and 22.5 degree. Depth of cut capacity of 2 9/16 inch. Ball bearing lower guard provides long life in harsh environment. Lower guard design improves performance when making bevel cuts and cutting shims. An integrated dust blower allows the user to clear its line of sight while cutting.",
-        "price":300,
-        "stock":200,
-        "minOrder":50,
-        "ratings":4.5,
-        "sold":120
+        "price": 300,
+        "stock": 200,
+        "minOrder": 50,
+        "ratings": 4.5,
+        "sold": 120
     },
     {
         "img": "https://i.ibb.co/VgvsBYH/compact-rechargeable-drill-removebg-preview.png",
-        "name":"Champion Bosch PS31 2A",
+        "name": "Champion Bosch PS31 2A",
         "description": "This DeWalt combi drill is part of the intelligent XR Lithium Ion Series designed for efficiency and making applications faster. It has Drill Driver and Hammer settings for multiple applications. 13 mm single sleeve chuck & spindle lock for quick & easy bit change with one hand. Two speed settings. variable speed & reverse switch for maximum control. 15 position adjustable torque control for consistent screw driving into a variety of materials with different screw sizes",
-        "price":300,
-        "stock":200,
-        "minOrder":50,
-        "ratings":4.5,
-        "sold":120
+        "price": 300,
+        "stock": 200,
+        "minOrder": 50,
+        "ratings": 4.5,
+        "sold": 120
     },
     {
         "img": "https://i.ibb.co/q7FD2j5/cordless-jig-saw-removebg-preview.png",
-        "name":"cordless-jig-saw",
+        "name": "cordless-jig-saw",
         "description": "The CHAMPION 20V Orbital Jigsaw is ideal for tight curves and precision cutting. The variable speed trigger allows for up to 3,000 SPM (Strokes per minute) giving you ultimate control to help you get the perfect cut every time! With this jigsaw you get the choice of 4 different orbital settings meant for cutting through a variety of materials. The 45-degree level base allows for more versatile cuts for more complex projects while the easy release blade collar makes changing blades quick and painless. The lock-on switch allows for continuous cutting while reducing user fatigue. A built-in LED light increases visibility for increased accuracy when cutting. This jigsaw runs on any CHAMPION 20V Lithium-Ion battery and is part of CHAMPION’s lineup of 20V tools meant to power your lifestyle",
-        "price":300,
-        "stock":200,
-        "minOrder":50,
-        "ratings":4.5,
-        "sold":120
+        "price": 300,
+        "stock": 200,
+        "minOrder": 50,
+        "ratings": 4.5,
+        "sold": 120
     },
     {
         "img": "https://i.ibb.co/0BC5Hy5/drill-removebg-preview.png",
-        "name":"Champion electric drill",
+        "name": "Champion electric drill",
         "description": "Champion’s 18-inch 45cc Portable Gas Chainsaw is designed to take care of your heavy-duty cutting needs with power, reliability and speed. Featuring anti-vibration engine mounts and a low-kickback chain, this powerful tool will help you get the job done safely and efficiently.",
-        "price":300,
-        "stock":200,
-        "minOrder":50,
-        "ratings":4.5,
-        "sold":120
+        "price": 300,
+        "stock": 200,
+        "minOrder": 50,
+        "ratings": 4.5,
+        "sold": 120
     },
     {
         "img": "https://i.ibb.co/4S81Yfv/electric-drill-removebg-preview.png",
-        "name":"New Electric Drill",
+        "name": "New Electric Drill",
         "description": "Champion’s 18-inch 45cc Portable Gas Chainsaw is designed to take care of your heavy-duty cutting needs with power, reliability and speed. Featuring anti-vibration engine mounts and a low-kickback chain, this powerful tool will help you get the job done safely and efficiently.",
-        "price":300,
-        "stock":200,
-        "minOrder":50,
-        "ratings":4.5,
-        "sold":120
+        "price": 300,
+        "stock": 200,
+        "minOrder": 50,
+        "ratings": 4.5,
+        "sold": 120
     },
     {
         "img": "https://i.ibb.co/f2Ch5Q0/jackhammer-drill-removebg-preview.png",
-        "name":"Champion jackhammer-drill",
+        "name": "Champion jackhammer-drill",
         "description": "Champion’s 18-inch 45cc Portable Gas Chainsaw is designed to take care of your heavy-duty cutting needs with power, reliability and speed. Featuring anti-vibration engine mounts and a low-kickback chain, this powerful tool will help you get the job done safely and efficiently.",
-        "price":300,
-        "stock":200,
-        "minOrder":50,
-        "ratings":4.5,
-        "sold":120
+        "price": 300,
+        "stock": 200,
+        "minOrder": 50,
+        "ratings": 4.5,
+        "sold": 120
     },
     {
         "img": "https://i.ibb.co/60CnKj8/Piston-Air-Compressor-removebg-preview.png",
-        "name":"Piston-Air-Compressor",
+        "name": "Piston-Air-Compressor",
         "description": "Champion’s 18-inch 45cc Portable Gas Chainsaw is designed to take care of your heavy-duty cutting needs with power, reliability and speed. Featuring anti-vibration engine mounts and a low-kickback chain, this powerful tool will help you get the job done safely and efficiently.",
-        "price":300,
-        "stock":200,
-        "minOrder":50,
-        "ratings":4.5,
-        "sold":120
+        "price": 300,
+        "stock": 200,
+        "minOrder": 50,
+        "ratings": 4.5,
+        "sold": 120
     },
     {
         "img": "https://i.ibb.co/PrgncCp/Power-planer-removebg-preview.png",
-        "name":"Power-planer",
+        "name": "Power-planer",
         "description": "Champion’s 18-inch 45cc Portable Gas Chainsaw is designed to take care of your heavy-duty cutting needs with power, reliability and speed. Featuring anti-vibration engine mounts and a low-kickback chain, this powerful tool will help you get the job done safely and efficiently.",
-        "price":300,
-        "stock":200,
-        "minOrder":50,
-        "ratings":4.5,
-        "sold":120
+        "price": 300,
+        "stock": 200,
+        "minOrder": 50,
+        "ratings": 4.5,
+        "sold": 120
     },
     {
         "img": "https://i.ibb.co/dGhKTV8/professional-drill-hammer-removebg-preview.png",
-        "name":"Professional-drill-hammer",
+        "name": "Professional-drill-hammer",
         "description": "Champion’s 18-inch 45cc Portable Gas Chainsaw is designed to take care of your heavy-duty cutting needs with power, reliability and speed. Featuring anti-vibration engine mounts and a low-kickback chain, this powerful tool will help you get the job done safely and efficiently.",
-        "price":300,
-        "stock":200,
-        "minOrder":50,
-        "ratings":4.5,
-        "sold":120
+        "price": 300,
+        "stock": 200,
+        "minOrder": 50,
+        "ratings": 4.5,
+        "sold": 120
     },
     {
         "img": "https://i.ibb.co/p3xPnt6/professional-electric-drill-mixer-removebg-preview.png",
-        "name":"Professional electric drill mixer",
+        "name": "Professional electric drill mixer",
         "description": "Champion’s 18-inch 45cc Portable Gas Chainsaw is designed to take care of your heavy-duty cutting needs with power, reliability and speed. Featuring anti-vibration engine mounts and a low-kickback chain, this powerful tool will help you get the job done safely and efficiently.",
-        "price":300,
-        "stock":200,
-        "minOrder":50,
-        "ratings":4.5,
-        "sold":120
+        "price": 300,
+        "stock": 200,
+        "minOrder": 50,
+        "ratings": 4.5,
+        "sold": 120
     },
     {
         "img": "https://i.ibb.co/F7JDsxV/professional-electric-jigsaw-removebg-preview.png",
         "description": "Champion’s 18-inch 45cc Portable Gas Chainsaw is designed to take care of your heavy-duty cutting needs with power, reliability and speed. Featuring anti-vibration engine mounts and a low-kickback chain, this powerful tool will help you get the job done safely and efficiently.",
-        "price":300,
-        "stock":200,
-        "minOrder":50,
-        "ratings":4.5,
-        "sold":120
+        "price": 300,
+        "stock": 200,
+        "minOrder": 50,
+        "ratings": 4.5,
+        "sold": 120
     },
     {
         "img": "https://i.ibb.co/SrgLKtd/professional-rotary-hammer-removebg-preview.png",
-        "name":"Professional Rotary hammer",
+        "name": "Professional Rotary hammer",
         "description": "Champion’s 18-inch 45cc Portable Gas Chainsaw is designed to take care of your heavy-duty cutting needs with power, reliability and speed. Featuring anti-vibration engine mounts and a low-kickback chain, this powerful tool will help you get the job done safely and efficiently.",
-        "price":300,
-        "stock":200,
-        "minOrder":50,
-        "ratings":4.5,
-        "sold":120
+        "price": 300,
+        "stock": 200,
+        "minOrder": 50,
+        "ratings": 4.5,
+        "sold": 120
     },
     {
         "img": "https://i.ibb.co/4Rg7RZj/Random-Orbit-Sander-removebg-preview.png",
-        "name":"Random-Orbit-Sander",
+        "name": "Random-Orbit-Sander",
         "description": "Champion’s 18-inch 45cc Portable Gas Chainsaw is designed to take care of your heavy-duty cutting needs with power, reliability and speed. Featuring anti-vibration engine mounts and a low-kickback chain, this powerful tool will help you get the job done safely and efficiently.",
-        "price":300,
-        "stock":200,
-        "minOrder":50,
-        "ratings":4.5,
-        "sold":120
+        "price": 300,
+        "stock": 200,
+        "minOrder": 50,
+        "ratings": 4.5,
+        "sold": 120
     },
     {
         "img": "https://i.ibb.co/nB0bk8b/Truck-Winch-Rigging-Kit-removebg-preview.png",
-        "name":"Truck Winch Rigging Kit",
+        "name": "Truck Winch Rigging Kit",
         "description": "Champion’s 18-inch 45cc Portable Gas Chainsaw is designed to take care of your heavy-duty cutting needs with power, reliability and speed. Featuring anti-vibration engine mounts and a low-kickback chain, this powerful tool will help you get the job done safely and efficiently.",
-        "price":300,
-        "stock":200,
-        "minOrder":50,
-        "ratings":4.5,
-        "sold":120
+        "price": 300,
+        "stock": 200,
+        "minOrder": 50,
+        "ratings": 4.5,
+        "sold": 120
     },
     {
         "img": "https://i.ibb.co/yVVSF7L/18-inch-45cc-Chainsaw-removebg-preview.png",
-        "name":"18-inch 45cc Chainsaw",
+        "name": "18-inch 45cc Chainsaw",
         "description": "Champion’s 18-inch 45cc Portable Gas Chainsaw is designed to take care of your heavy-duty cutting needs with power, reliability and speed. Featuring anti-vibration engine mounts and a low-kickback chain, this powerful tool will help you get the job done safely and efficiently.",
-        "price":300,
-        "stock":200,
-        "minOrder":50,
-        "ratings":4.5,
-        "sold":120
+        "price": 300,
+        "stock": 200,
+        "minOrder": 50,
+        "ratings": 4.5,
+        "sold": 120
     },
     {
         "img": "https://i.ibb.co/1dvGGfq/22-Inch-Front-Tine-Tiller-removebg-preview.png",
-        "name":"22-Inch Front Tine Tiller",
+        "name": "22-Inch Front Tine Tiller",
         "description": "The Champion 22-Inch Front Tine Tiller blends power and performance to take you from barren ground to a great garden in no time. The 212cc engine powers through tough soil while the storable transport wheels and dual-roation tilling feature make getting to the garden and then taming it, easy.",
-        "price":300,
-        "stock":200,
-        "minOrder":50,
-        "ratings":4.5,
-        "sold":120
+        "price": 300,
+        "stock": 200,
+        "minOrder": 50,
+        "ratings": 4.5,
+        "sold": 120
     },
     {
         "img": "https://i.ibb.co/pJBS6QB/27-inch-Snow-Blower-removebg-preview.png",
-        "name":"27-inch Snow Blower",
+        "name": "27-inch Snow Blower",
         "description": "The Champion 2-stage snow blower tackles snowfalls with an impressive 27-inch clearing width and 23-inch clearing height. Powered by a 301cc cold-weather engine with a handy 120-volt push-button electric start, the easy-to-adjust dash mounted chute control directs snow up to 40 feet (12.2 m). Turning the snow blower has never been easier with Power Turn Steering Technology™. Keep your hands comfortable with heated hand grips while you light up the night with twin dash mounted LED lights.",
-        "price":300,
-        "stock":200,
-        "minOrder":50,
-        "ratings":4.5,
-        "sold":120
+        "price": 300,
+        "stock": 200,
+        "minOrder": 50,
+        "ratings": 4.5,
+        "sold": 120
     },
     {
         "img": "https://i.ibb.co/2YHQByj/42cc-Backpack-Leaf-Blower-removebg-preview.png",
-        "name":"42cc- Backpack Leaf Blower",
+        "name": "42cc- Backpack Leaf Blower",
         "description": "Built with a powerful 42cc Champion Engine, the Champion 200934 Backpack Blower delivers up to 529 CFM and airspeeds up to 190 mph (322 kph) for a wide variety of debris clearing applications. Adjustable padded straps and a vented backrest provide user comfort during operation. The variable throttle trigger allows users to adjust their clearing power for the task at hand.",
-        "price":300,
-        "stock":200,
-        "minOrder":50,
-        "ratings":4.5,
-        "sold":120
+        "price": 300,
+        "stock": 200,
+        "minOrder": 50,
+        "ratings": 4.5,
+        "sold": 120
     },
     {
         "img": "https://i.ibb.co/Nmwx1VL/79cc-Walk-Behind-Lawn-Edger-removebg-preview.png",
-        "name":"79cc Walk Behind Lawn Edger",
+        "name": "79cc Walk Behind Lawn Edger",
         "description": "Built with a powerful 42cc Champion Engine, the Champion 200934 Backpack Blower delivers up to 529 CFM and airspeeds up to 190 mph (322 kph) for a wide variety of debris clearing applications. Adjustable padded straps and a vented backrest provide user comfort during operation. The variable throttle trigger allows users to adjust their clearing power for the task at hand.",
-        "price":300,
-        "stock":200,
-        "minOrder":50,
-        "ratings":4.5,
-        "sold":120
+        "price": 300,
+        "stock": 200,
+        "minOrder": 50,
+        "ratings": 4.5,
+        "sold": 120
     },
     {
         "img": "https://i.ibb.co/Hd6rQVz/224cc-Walk-Behind-Leaf-Blower-removebg-preview.png",
-        "name":"224cc Walk Behind Leaf Blower",
+        "name": "224cc Walk Behind Leaf Blower",
         "description": "The Champion 9-Inch 79cc Lawn Edger has the power you need to give your lawn a defined, clean look. The curb hop wheel adjustment makes it easy to edge along a curb, plus the 9-inch, 3-point blade with an adjustable edging depth of up to 2.5 inches will get you a professionally edged lawn in no time.",
-        "price":300,
-        "stock":200,
-        "minOrder":50,
-        "ratings":4.5,
-        "sold":120
+        "price": 300,
+        "stock": 200,
+        "minOrder": 50,
+        "ratings": 4.5,
+        "sold": 120
     },
     {
         "img": "https://i.ibb.co/JzHLBHJ/1200-Watt-Generator-removebg-preview.png",
-        "name":"1200-Watt Generator",
+        "name": "1200-Watt Generator",
         "description": "Convenient and versatile power is yours with the Champion 1200-watt portable generator. Rely on the Champion 79cc engine and enjoy up to 10 hours of run time at 50% load with a dBA of 65. Featuring Intelligauge, this generator is your perfect portable power solution.",
-        "price":300,
-        "stock":200,
-        "minOrder":50,
-        "ratings":4.5,
-        "sold":120
+        "price": 300,
+        "stock": 200,
+        "minOrder": 50,
+        "ratings": 4.5,
+        "sold": 120
     },
     {
         "img": "https://i.ibb.co/fGZXWF7/3000-PSI-Pressure-Washer-removebg-preview.png",
-        "name":"3000-PSI Pressure Washer",
+        "name": "3000-PSI Pressure Washer",
         "description": "Champion’s 3000-PSI Dolly-Style Gas Pressure Washer with 2.5 GPM features three nozzles, two detergent tanks, a 25-foot high pressure hose, comfort grip gun and an axial cam pump for consistent cleaning. Powered by a 196cc Champion engine, this unit provides cost-effective cleaning power in a compact design.",
-        "price":300,
-        "stock":200,
-        "minOrder":50,
-        "ratings":4.5,
-        "sold":120
+        "price": 300,
+        "stock": 200,
+        "minOrder": 50,
+        "ratings": 4.5,
+        "sold": 120
     },
     {
         "img": "https://i.ibb.co/WvxJMtd/Angle-grinder-removebg-preview.png",
-        "name":"Angle grinder",
+        "name": "Angle grinder",
         "description": "The DWE43114 4-1/2(115mm) / 5 (125mm) High Performance Cut-Off/Grinder with E-Clutch® shuts the grinder off when a wheel pinch or wheel stall occurs. Dust Ejection System™ technology clears dust and debris for extra protection. Power tool shuts off before overheating with Power-Off®Advanced Overload Protection",
-        "price":300,
-        "stock":200,
-        "minOrder":50,
-        "ratings":4.5,
-        "sold":120
-    }
+        "price": 300,
+        "stock": 200,
+        "minOrder": 50,
+        "ratings": 4.5,
+        "sold": 120
+    },
+    [
+        {
+            "email": "as@as.as",
+            "cart": [
+                {
+                    "_id": "62e4baa3f5c579bd776d9595",
+                    "img": "https://i.ibb.co/WvxJMtd/Angle-grinder-removebg-preview.png",
+                    "name": "Angle grinder",
+                    "description": "The DWE43114 4-1/2(115mm) / 5 (125mm) High Performance Cut-Off/Grinder with E-Clutch® shuts the grinder off when a wheel pinch or wheel stall occurs. Dust Ejection System™ technology clears dust and debris for extra protection. Power tool shuts off before overheating with Power-Off®Advanced Overload Protection",
+                    "price": "300",
+                    "stock": "200",
+                    "minOrder": "50",
+                    "ratings": "4.5",
+                    "sold": "120"
+                },
+                {
+                    "_id": "62e4baa3f5c579bd776d9596",
+                    "img": "https://i.ibb.co/WvxJMtd/Angle-grinder-removebg-preview.png",
+                    "name": "Angle grinder",
+                    "description": "The DWE43114 4-1/2(115mm) / 5 (125mm) High Performance Cut-Off/Grinder with E-Clutch® shuts the grinder off when a wheel pinch or wheel stall occurs. Dust Ejection System™ technology clears dust and debris for extra protection. Power tool shuts off before overheating with Power-Off®Advanced Overload Protection",
+                    "price": "300",
+                    "stock": "200",
+                    "minOrder": "50",
+                    "ratings": "4.5",
+                    "sold": "120"
+                },
+                {
+                    "_id": "62e4baa3f5c579bd776d9597",
+                    "img": "https://i.ibb.co/WvxJMtd/Angle-grinder-removebg-preview.png",
+                    "name": "Angle grinder",
+                    "description": "The DWE43114 4-1/2(115mm) / 5 (125mm) High Performance Cut-Off/Grinder with E-Clutch® shuts the grinder off when a wheel pinch or wheel stall occurs. Dust Ejection System™ technology clears dust and debris for extra protection. Power tool shuts off before overheating with Power-Off®Advanced Overload Protection",
+                    "price": "300",
+                    "stock": "200",
+                    "minOrder": "50",
+                    "ratings": "4.5",
+                    "sold": "120"
+                },
+                {
+                    "_id": "62e4baa3f5c579bd776d9598",
+                    "img": "https://i.ibb.co/WvxJMtd/Angle-grinder-removebg-preview.png",
+                    "name": "Angle grinder",
+                    "description": "The DWE43114 4-1/2(115mm) / 5 (125mm) High Performance Cut-Off/Grinder with E-Clutch® shuts the grinder off when a wheel pinch or wheel stall occurs. Dust Ejection System™ technology clears dust and debris for extra protection. Power tool shuts off before overheating with Power-Off®Advanced Overload Protection",
+                    "price": "300",
+                    "stock": "200",
+                    "minOrder": "50",
+                    "ratings": "4.5",
+                    "sold": "120"
+                }
+            ]
+        }
+        
+    ]
 ]

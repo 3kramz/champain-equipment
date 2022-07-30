@@ -9,12 +9,12 @@ const Footer = () => {
                 <p className=''> We are available to help 24 hours a day, 7 days a week.</p>
             </div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 text-primary text-xl font-bold my-10 border-b-4 border-base-500 pb-10">
+            <div className="grid grid-cols-2 lg:grid-cols-4 text-primary text-xl font-bold  border-b-4 border-base-500 mb-5">
 
-                <button class="bg-accent mt-5 mx-2 lg:m-10 rounded font-bold py-2">Help center</button>
-                <button class="bg-accent mt-5 mx-2 lg:m-10 rounded font-bold py-2">+880 1845517376</button>
-                <button class="bg-accent mt-5 mx-2 lg:m-10 rounded font-bold py-2">Mail Us</button>
-                <button class="bg-accent mt-5 mx-2 lg:m-10 rounded font-bold py-2">Order Parts</button>
+                <button class="bg-accent mt-5 mx-2 lg:m-5 rounded font-bold py-2">Help center</button>
+                <button class="bg-accent mt-5 mx-2 lg:m-5 rounded font-bold py-2">+880 1845517376</button>
+                <button class="bg-accent mt-5 mx-2 lg:m-5 rounded font-bold py-2">Mail Us</button>
+                <button class="bg-accent mt-5 mx-2 lg:m-5 rounded font-bold py-2">Order Parts</button>
             </div>
 
             <footer class="footer  text-white">

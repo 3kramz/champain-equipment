@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { setUserBillingInfo, setUserShipingInfo } from '../../../Redux/Actions/userActions';
+import { useSelector } from 'react-redux';
 import BillingModals from './Modals/BillingModals';
 import ShippingInfo from './Modals/ShippingInfo';
 
@@ -9,15 +8,6 @@ const MyAddress = () => {
     const [isOpenShipping, setIsOpenShipping] = useState(null)
     const bill = useSelector(state => state.billing)
     const Shipping = useSelector(state => state.shipping)
-    const email = useSelector(state => state.user.email)
-    const dispatch = useDispatch()
-
-    fetch(`http://localhost:5000/user/bill/${email}`, { method: 'GET' }).then(res => res.json()).then(data => dispatch(setUserBillingInfo(data.bill ))).catch(err => console.log(err))
-    fetch(`http://localhost:5000/user/shipping/${email}`, { method: 'GET' }).then(res => res.json()).then(data => dispatch(setUserShipingInfo(data.shipping ))).catch(err => console.log(err))
-
-
-
-
 
     return (
         <div className='md:flex gap-64 m-16'>
@@ -31,7 +21,6 @@ const MyAddress = () => {
                     <p>{bill.country}</p>
                     <label onClick={() => setIsOpenBilling(true)} for="my-modal" class=" modal-button text-[#3BB77E] mt-2 hover:text-yellow-600">Edit</label>
 
-                    {/* <button className='text-[#3BB77E] mt-2 hover:text-yellow-600'>Edit</button> */}
                 </div>
             </div>
 

@@ -26,7 +26,7 @@ const Tool = ({ tool }) => {
                 </div>
                 
                 <div class="card-actions justify-start">
-                <button class="btn btn-wide btn-sm btn-outline btn-primary">Wide</button>
+                <button class="btn btn-wide btn-sm btn-outline btn-primary">Take</button>
                 </div>
             </div>
         </div>

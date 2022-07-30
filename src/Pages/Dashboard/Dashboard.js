@@ -5,12 +5,24 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init'
 import Loading from '../../Components/Loading'
 import useRole from '../../Role/useRole'
+import { useSelector } from 'react-redux';
 
 const Dashboard = () => {
-    const [user, loading] = useAuthState(auth);
-    const role = useRole(user)
+    // const [user, loading] = useAuthState(auth);
+    const role = useSelector(state => state.role);
+    console.log(role)
+
+    // const dispatch = useDispatch()
+    // useEffect(()=>{
+
+    //     fetch(`http://localhost:5000/user/${user.email}`, { method: 'GET' }).then(res => res.json()).then(data => dispatch(setUserBillingInfo(data.bill ))).catch(err => console.log(err))
+    //     fetch(`http://localhost:5000/user/${user.email}`, { method: 'GET' }).then(res => res.json()).then(data => dispatch(setUserShipingInfo(data.shipping ))).catch(err => console.log(err))
+
+    // },[user,dispatch])
+
+
     
-    if (loading) { return <Loading /> }
+    // if (loading) { return <Loading /> }
 
     const adminDashboard = <>
         <li><Link to="/dashboard">My Profile</Link></li>
