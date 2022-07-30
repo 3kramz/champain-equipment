@@ -21,7 +21,6 @@ const ShippingInfo = ({ setIsOpen }) => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 if (data.acknowledged) {
                     dispatch(setUserShipingInfo(info))
                     swal("Successfull", "Shipping information updated successfully", "success");

@@ -3,34 +3,52 @@ import { SET_USER_INFO, SET_USER_ROLE, remove_USER_ROLE, SET_USER_BILLING_INFO, 
 export const setUserInfo = (userInfo) => {
     return {
         type: SET_USER_INFO,
-        payload:userInfo
+        payload: userInfo
     }
 }
 
 export const setUserRole = (role) => {
     return {
         type: SET_USER_ROLE,
-        payload:role
+        payload: role
     }
 }
 
 export const removeUserRole = () => {
     return {
         type: remove_USER_ROLE,
-        payload:{}
+        payload: {}
     }
 }
 
 export const setUserBillingInfo = (info) => {
-    return {
-        type: SET_USER_BILLING_INFO,
-        payload:info
+
+    if (info) {
+        return {
+            type: SET_USER_BILLING_INFO,
+            payload: info
+        }
+    }
+    else {
+        return {
+            type: SET_USER_BILLING_INFO,
+            payload: {}
+        }
     }
 }
 
 export const setUserShipingInfo = (info) => {
-    return {
-        type: SET_USER_SHIPPING_INFO,
-        payload:info
+
+    if (info) {
+        return {
+            type: SET_USER_SHIPPING_INFO,
+            payload: info
+        }
+    }
+    else {
+        return {
+            type: SET_USER_BILLING_INFO,
+            payload: {}
+        }
     }
 }

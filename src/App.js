@@ -21,41 +21,39 @@ import { useEffect } from 'react';
 function App() {
   const dispatch = useDispatch();
   const [user, loading] = useAuthState(auth);
-  dispatch(setUserInfo(user));
   const role = useSelector(state => state.role);
-
+  console.log(role)
   useEffect(() => {
-    fetch('http://localhost:5000/tools').then(res => res.json()).then(data => dispatch(setTools(data))).catch(err=>console.log(err))
-    fetch(`http://localhost:5000/cart/${user?.email}`).then(res => res.json()).then(data => dispatch(setCart(data.cart))).catch(err=>console.log(err))
+    fetch('http://localhost:5000/tools').then(res => res.json()).then(data => dispatch(setTools(data))).catch(err => console.log(err))
+    fetch(`http://localhost:5000/cart/${user?.email}`).then(res => res.json()).then(data => dispatch(setCart(data.cart))).catch(err => console.log(err))
     fetch(`http://localhost:5000/user/${user?.email}`).then(res => res.json()).then(data => {
       dispatch(setUserBillingInfo(data.bill))
       dispatch(setUserShipingInfo(data.shipping))
       dispatch(setUserRole(data.role))
-    }).catch(err=>console.log(err))
-    
-  }, [ user, dispatch])
+    }).catch(err => console.log(err))
+  }, [user, dispatch])
 
 
 
   if (loading) { return <Loading /> }
+  dispatch(setUserInfo(user));
   return (
     <div className=" bg-white" >
       <Navbar />
 
       <Routes>
-        {/* -----------------------------Public routes------------------------------------------ */}
+        {/* ----------------------------   Public routes  ------------------------------------------ */}
         {PublicRoutes.map(({ Component, path }) => <Route element={<Component />} path={path} />)}
 
         <Route path="/dashboard" element={<Dashboard2 />}>
 
-          {/* -----------------------------Admin routes------------------------------------------ */}
+          {/* -----------------------------  Admin dashboard routes  ------------------------------------------ */}
           {role === "admin" && AdminRoutes?.map(({ path, Component }) => <Route path={`${path}`} element={<RequireAdmin>< Component /></RequireAdmin>} />)}
 
-          {/* -----------------------------Private routes------------------------------------------ */}
+          {/* -----------------------------  Private dashboard routes  ------------------------------------------ */}
           {role === "user" && PrivateRoutes?.map(({ path, Component }) => <Route path={`${path}`} element={<RequireUser>< Component /></RequireUser>} />)}
-
-
         </Route>
+        {/* -----------------------------  Private routes------------------------------------------ */}
         {role === "user" && privateUserRoutes?.map(({ path, Component }) => <Route path={`${path}`} element={<RequireUser>< Component /></RequireUser>} />)}
       </Routes>
     </div>

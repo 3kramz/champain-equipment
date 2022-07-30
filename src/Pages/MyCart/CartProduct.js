@@ -12,7 +12,7 @@ const CartProduct = ({ cart }) => {
     
     const dispatch = useDispatch();
     const removeTools = (id) => {
-        const filredTools = carts.filter(tool => tool["_id"] !== id)
+        const filredTools = carts?.filter(tool => tool["_id"] !== id)
 
         fetch(`http://localhost:5000/cart/${user.email}`, {
             method: 'PUT',
