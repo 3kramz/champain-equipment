@@ -11,11 +11,11 @@ const ProductDetailsModal = ({ tool, setIsOpen }) => {
     const { _id, description, minOrder, img, name, price, ratings } = tool
     const user = useSelector(state => state.user)
     const cart = useSelector(state => state.cart)
+    const role = useSelector(state => state.role)
     const dispatch = useDispatch()
 
     const addToCart = tool => {
-        console.log(user)
-        if (user) {
+        if (user && role === 'user') {
             const filredTools = cart?.filter(tool => tool["_id"] === _id)
             if (filredTools.length === 0) {
                 cart.push(tool)
