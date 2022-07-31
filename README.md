@@ -12,6 +12,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - run command `npm start`
 - browse: http://localhost:3000 for seeing main application views
 
+
+# credentials
+
+ Email - admin@admin.com
+ Password - 123456 
+
 # Features
 
 - User can order tool from available tool
@@ -23,7 +29,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Used Technologies
 
-Backend [API SERVER URI https://powerful-caverns-14505.herokuapp.com ]
+Backend [API SERVER URI]( https://cryptic-ocean-69200.herokuapp.com ) - https://cryptic-ocean-69200.herokuapp.com
 
 - Language : Node.js
 - Framework : Express.js
