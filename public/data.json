@@ -237,57 +237,5 @@
         "minOrder": 50,
         "ratings": 4.5,
         "sold": 120
-    },
-    [
-        {
-            "email": "as@as.as",
-            "cart": [
-                {
-                    "_id": "62e4baa3f5c579bd776d9595",
-                    "img": "https://i.ibb.co/WvxJMtd/Angle-grinder-removebg-preview.png",
-                    "name": "Angle grinder",
-                    "description": "The DWE43114 4-1/2(115mm) / 5 (125mm) High Performance Cut-Off/Grinder with E-Clutch® shuts the grinder off when a wheel pinch or wheel stall occurs. Dust Ejection System™ technology clears dust and debris for extra protection. Power tool shuts off before overheating with Power-Off®Advanced Overload Protection",
-                    "price": "300",
-                    "stock": "200",
-                    "minOrder": "50",
-                    "ratings": "4.5",
-                    "sold": "120"
-                },
-                {
-                    "_id": "62e4baa3f5c579bd776d9596",
-                    "img": "https://i.ibb.co/WvxJMtd/Angle-grinder-removebg-preview.png",
-                    "name": "Angle grinder",
-                    "description": "The DWE43114 4-1/2(115mm) / 5 (125mm) High Performance Cut-Off/Grinder with E-Clutch® shuts the grinder off when a wheel pinch or wheel stall occurs. Dust Ejection System™ technology clears dust and debris for extra protection. Power tool shuts off before overheating with Power-Off®Advanced Overload Protection",
-                    "price": "300",
-                    "stock": "200",
-                    "minOrder": "50",
-                    "ratings": "4.5",
-                    "sold": "120"
-                },
-                {
-                    "_id": "62e4baa3f5c579bd776d9597",
-                    "img": "https://i.ibb.co/WvxJMtd/Angle-grinder-removebg-preview.png",
-                    "name": "Angle grinder",
-                    "description": "The DWE43114 4-1/2(115mm) / 5 (125mm) High Performance Cut-Off/Grinder with E-Clutch® shuts the grinder off when a wheel pinch or wheel stall occurs. Dust Ejection System™ technology clears dust and debris for extra protection. Power tool shuts off before overheating with Power-Off®Advanced Overload Protection",
-                    "price": "300",
-                    "stock": "200",
-                    "minOrder": "50",
-                    "ratings": "4.5",
-                    "sold": "120"
-                },
-                {
-                    "_id": "62e4baa3f5c579bd776d9598",
-                    "img": "https://i.ibb.co/WvxJMtd/Angle-grinder-removebg-preview.png",
-                    "name": "Angle grinder",
-                    "description": "The DWE43114 4-1/2(115mm) / 5 (125mm) High Performance Cut-Off/Grinder with E-Clutch® shuts the grinder off when a wheel pinch or wheel stall occurs. Dust Ejection System™ technology clears dust and debris for extra protection. Power tool shuts off before overheating with Power-Off®Advanced Overload Protection",
-                    "price": "300",
-                    "stock": "200",
-                    "minOrder": "50",
-                    "ratings": "4.5",
-                    "sold": "120"
-                }
-            ]
-        }
-        
-    ]
+    }
 ]
