@@ -1,12 +1,11 @@
 import React from 'react';
 
 const OrderTr = ({order}) => {
-    const {name,_id, status, date}=order;
-    console.log(order)
+    const {name, _id, status, date}=order;
     return (
             <tr>
                 <td className="px-6 py-4">
-                  {_id}
+                  { _id}
                 </td>
 
                 <td className="px-6 py-4">
