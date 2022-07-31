@@ -1,6 +1,6 @@
 import AddProducts from '../Pages/Dashboard/AdminPages/AddProducts';
 import AllOrders from '../Pages/Dashboard/AdminPages/AllOrders';
-import Products from '../Pages/Dashboard/AdminPages/Products';
+import Products from '../Pages/Dashboard/AdminPages/Products/Products';
 import Users from '../Pages/Dashboard/AdminPages/Users';
 import MyAdderss from '../Pages/Dashboard/MyAddress/MyAdderss';
 
