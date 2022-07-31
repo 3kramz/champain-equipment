@@ -1,12 +1,21 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Link, NavLink, Outlet, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { signOut } from 'firebase/auth';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { setOrderInfo } from '../../Redux/Actions/orderActions';
 
 const Dashboard = () => {
     const role = useSelector(state => state.role);
+    const email = useSelector(state => state.user.email);
+    const dispatch = useDispatch();
     let navigate = useNavigate();
+
+useEffect(()=>{
+    fetch(`http://localhost:5000/order/${email}`).then(res => res.json())
+        .then(data =>dispatch(setOrderInfo(data)))
+        .catch(err => console.log(err))
+},[email,dispatch])
 
     return (
         <>
@@ -29,19 +38,13 @@ const Dashboard = () => {
                     <label htmlFor="dashboard-drawer" className="drawer-overlay"></label>
                     <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
                         {/* <!-- Sidebar content here --> */}
-
-
                         
-
-
-
 
                         {/* User Contents */}
                         {role === "user" && <>
                             <li><Link to="/dashboard">My Address</Link></li>
                             <li><Link to="/dashboard/my-orders">My Order</Link></li>
                             <li><Link to="/dashboard/track-order">Track Your Order</Link></li>
-                            <li><Link to="/dashboard/account-details">Account Details</Link></li>
                             <li><button onClick={() => {signOut(auth);   navigate("/login")} }>Log out</button></li>
                         </>}
 

@@ -12,10 +12,13 @@ const BillingDetails = () => {
 
 
     const onSubmit = info => {
-
+        const dateObj = new Date();
+        
         cart.forEach(item => {
             item.id = item["_id"]
             delete item["_id"]
+            item.date=dateObj.toDateString()
+            item.status="unpaid"
             item.info = info
             item.email = email
 
