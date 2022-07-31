@@ -16,7 +16,7 @@ const UpdateStatus = ({ order, setIsOpen }) => {
             },
             body: JSON.stringify({ status })
         }).then(res => res.json()).then(() => {
-            fetch(`${httpLink}/order`).then(res => res.json()).then(data => { dispatch(setAllOrderInfo(data)); setIsOpen(false) }).catch(err => console.log(err))
+            fetch(`${httpLink}/order`).then(res => res.json()).then(data => { dispatch(setAllOrderInfo(data.reverse())); setIsOpen(false) }).catch(err => console.log(err))
         }).catch(err => console.log(err))
     }
 

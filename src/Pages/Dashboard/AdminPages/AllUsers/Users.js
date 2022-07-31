@@ -14,9 +14,7 @@ const Users = () => {
 
 
     const users = useSelector(state => state.allUsers);
-    console.log(users)
-
-
+   
     const makeAdmin = (id,role) => {
 
         fetch(`${httpLink}/user/admin/${id}`, {

@@ -8,7 +8,7 @@ const AllOrders = () => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        fetch(`${httpLink}/order`).then(res => res.json()).then(data => { dispatch(setAllOrderInfo(data)) }).catch(err => console.log(err))
+        fetch(`${httpLink}/order`).then(res => res.json()).then(data => { dispatch(setAllOrderInfo(data.reverse())) }).catch(err => console.log(err))
     }, [dispatch])
 
     const allOrderInfo = useSelector(state => state.allOrder)
