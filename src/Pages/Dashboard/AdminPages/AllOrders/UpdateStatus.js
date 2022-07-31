@@ -30,8 +30,8 @@ const UpdateStatus = ({ order, setIsOpen }) => {
             <input type="checkbox" id={_id} class="modal-toggle" />
             <div class="modal">
                 <div class="modal-box relative">
-                    <label for={_id} class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                    <h3 class="text-lg font-bold">{name}</h3>
+                    <label for={_id} class="btn btn-sm btn-primary btn-circle absolute right-2 top-2">✕</label>
+                    <h3 class="text-2xl font-bold">{name}</h3>
                     <h3 class=""> Current Order Status is - {status}</h3>
 
                     <div className='flex gap-5 mt-5'>
