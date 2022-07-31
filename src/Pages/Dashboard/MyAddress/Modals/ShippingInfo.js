@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import swal from 'sweetalert';
 import { setUserShipingInfo } from '../../../../Redux/Actions/userActions';
+import httpLink from '../../../../ServerLink/serverLink';
 
 const ShippingInfo = ({ setIsOpen }) => {
     const dispatch = useDispatch()
@@ -11,7 +12,7 @@ const ShippingInfo = ({ setIsOpen }) => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
     const onSubmit = async info => {
-        fetch(`http://localhost:5000/user/shipping/${user.email}`, {
+        fetch(`${httpLink}/user/shipping/${user.email}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

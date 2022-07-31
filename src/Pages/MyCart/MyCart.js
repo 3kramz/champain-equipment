@@ -9,6 +9,7 @@ import CartProduct from "./CartProduct";
 import { useDispatch, useSelector } from "react-redux";
 import { setCart } from "../../Redux/Actions/cartActions";
 import Footer from "../../Components/Footer";
+import httpLink from "../../ServerLink/serverLink";
 
 
 const MyCart = () => {
@@ -21,7 +22,7 @@ const MyCart = () => {
     carts.forEach(element => { subtotal = subtotal + parseFloat(element.price) });
 
     const clearCart = () => {
-        fetch(`http://localhost:5000/cart/${user.email}`, {
+        fetch(`${httpLink}/cart/${user.email}`, {
             method: 'PUT',
             headers: {
                 'content-Type': 'application/json',
@@ -30,11 +31,11 @@ const MyCart = () => {
         })
             .then(res => res.json())
             .then(data => {
-                fetch(`http://localhost:5000/cart/${user?.email}`).then(res => res.json()).then(data => dispatch(setCart(data.cart)))
+                fetch(`${httpLink}/cart/${user?.email}`).then(res => res.json()).then(data => dispatch(setCart(data.cart)))
             })
     }
 
-    const reloadeCart = () => fetch(`http://localhost:5000/cart/${user?.email}`).then(res => res.json()).then(data => dispatch(setCart(data.cart)))
+    const reloadeCart = () => fetch(`${httpLink}/cart/${user?.email}`).then(res => res.json()).then(data => dispatch(setCart(data.cart)))
 
     return (
         <>

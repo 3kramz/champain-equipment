@@ -5,6 +5,7 @@ import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-fireb
 import auth from '../../firebase.init';
 import Loading from '../../Components/Loading'
 import swal from 'sweetalert';
+import httpLink from '../../ServerLink/serverLink';
 
 const Signup = () => {
     const [
@@ -23,7 +24,7 @@ const Signup = () => {
 
     const onSubmit = async data => {
         await createUserWithEmailAndPassword(data.email, data.password)
-        await fetch(`http://localhost:5000/user/${data.email}`,{ method: 'POST'}).then(res=>res.json()).then(data=>console.log(data))
+        await fetch(`${httpLink}/user/${data.email}`,{ method: 'POST'}).then(res=>res.json()).then(data=>console.log(data))
         await updateProfile({ displayName: data.displayName });
         
     };
@@ -116,7 +117,8 @@ const Signup = () => {
                                 </label>
                             </div>
                             <div class="form-control mt-6">
-                                <button class="btn btn-primary">Sign Up</button>
+                            <input type="submit" value="Sign up"className="btn btn-primary text-white" />
+                              
                             </div>
                         </form>
                         <p><small>Already have an account? <Link className='text-secondary font-bold' to="/login">Log In</Link></small></p>

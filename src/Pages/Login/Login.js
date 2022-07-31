@@ -12,12 +12,14 @@ const Login = () => {
 
     const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
     const { register, handleSubmit, formState: { errors } } = useForm();
-  
+
     if (loading) return <Loading />
     if (error) swal("Failed to log in", `${error}`, "error");
-    
-    const onSubmit = data => signInWithEmailAndPassword(data.email, data.password)
-    
+
+    const onSubmit = data => {
+        signInWithEmailAndPassword(data.email, data.password)
+    }
+
     if (user) return <Navigate to="/" replace={true} />
 
     return (
@@ -81,7 +83,8 @@ const Login = () => {
                                 </label>
                             </div>
                             <div class="form-control mt-6">
-                                <button class="btn btn-primary">Login</button>
+                                <input type="submit" value="Login" className="btn btn-primary text-white" />
+
                             </div>
                         </form>
                         <p><small>New to Champion? <Link className='text-secondary font-bold' to="/signup"> Create Account </Link></small></p>

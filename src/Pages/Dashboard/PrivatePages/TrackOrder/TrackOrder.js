@@ -1,13 +1,14 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import swal from 'sweetalert';
+import httpLink from '../../../../ServerLink/serverLink';
 
 const MyReviews = () => {
 
     const { register, handleSubmit} = useForm();
     const onSubmit = info => {
 // console.log(data)
-        fetch(fetch(`http://localhost:5000/order-status/${info.order}`).then(res => res.json())
+        fetch(fetch(`${httpLink}/order-status/${info.order}`).then(res => res.json())
         .then(data =>{swal(`${data.status}`, `your order status is ${data.status}`, )})
         .catch(err => console.log(err)))
 

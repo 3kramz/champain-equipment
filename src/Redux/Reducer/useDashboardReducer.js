@@ -1,4 +1,20 @@
 import { SET_USER_BILLING_INFO, SET_USER_SHIPPING_INFO, SET_ORDER_INFO } from "../Constants/Constants";
+const initialBillState = {
+    lane: "N/A",
+    area: "N/A",
+    city: "N/A",
+    State: "N/A",
+    phone: "N/A",
+    country: "N/A"
+}
+const initialShippingState = {
+    lane: "N/A",
+    area: "N/A",
+    city: "N/A",
+    State: "N/A",
+    phone: "N/A",
+    country: "N/A"
+}
 const initialState = {
     lane: "N/A",
     area: "N/A",
@@ -7,7 +23,7 @@ const initialState = {
     phone: "N/A",
     country: "N/A"
 }
-export const userBillingInfoReducer = (state = initialState, { type, payload }) => {
+export const userBillingInfoReducer = (state =initialBillState, { type, payload }) => {
     switch (type) {
 
         case SET_USER_BILLING_INFO:
@@ -16,7 +32,7 @@ export const userBillingInfoReducer = (state = initialState, { type, payload }) 
             return state;
     }
 }
-export const userShipingInfoReducer = (state = initialState, { type, payload }) => {
+export const userShipingInfoReducer = (state = initialShippingState, { type, payload }) => {
     switch (type) {
 
         case SET_USER_SHIPPING_INFO:

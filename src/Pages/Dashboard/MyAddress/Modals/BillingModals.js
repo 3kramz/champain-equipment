@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import swal from 'sweetalert';
 import { setUserBillingInfo } from '../../../../Redux/Actions/userActions';
+import httpLink from '../../../../ServerLink/serverLink';
 
 const BillingModals = ({ setIsOpen }) => {
     const dispatch= useDispatch()
@@ -10,7 +11,7 @@ const BillingModals = ({ setIsOpen }) => {
     const { register, handleSubmit, formState: { errors },reset } = useForm();
     
     const onSubmit = async info => {
-        fetch(`http://localhost:5000/user/bill/${user.email}`, {
+        fetch(`${httpLink}/user/bill/${user.email}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

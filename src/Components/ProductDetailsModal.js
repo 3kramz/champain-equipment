@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import StarRatings from 'react-star-ratings/build/star-ratings';
 import swal from 'sweetalert';
 import { setCart } from '../Redux/Actions/cartActions';
+import httpLink from '../ServerLink/serverLink';
 
 const ProductDetailsModal = ({ tool, setIsOpen }) => {
     const { _id, description, minOrder, img, name, price, ratings } = tool
@@ -18,7 +19,7 @@ const ProductDetailsModal = ({ tool, setIsOpen }) => {
         if (filredTools.length===0) {
             cart.push(tool)
        
-            fetch(`http://localhost:5000/cart/${user.email}`, {
+            fetch(`${httpLink}/cart/${user.email}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

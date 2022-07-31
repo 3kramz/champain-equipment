@@ -4,6 +4,7 @@ import auth from '../../firebase.init';
 import { signOut } from 'firebase/auth';
 import { useSelector, useDispatch } from 'react-redux';
 import { setOrderInfo } from '../../Redux/Actions/orderActions';
+import httpLink from '../../ServerLink/serverLink';
 
 const Dashboard = () => {
     const role = useSelector(state => state.role);
@@ -12,7 +13,7 @@ const Dashboard = () => {
     let navigate = useNavigate();
 
 useEffect(()=>{
-    fetch(`http://localhost:5000/order/${email}`).then(res => res.json())
+    fetch(`${httpLink}/order/${email}`).then(res => res.json())
         .then(data =>dispatch(setOrderInfo(data)))
         .catch(err => console.log(err))
 },[email,dispatch])

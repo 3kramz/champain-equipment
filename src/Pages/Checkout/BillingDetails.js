@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import swal from 'sweetalert';
 import { setCart } from '../../Redux/Actions/cartActions';
+import httpLink from '../../ServerLink/serverLink';
 
 const BillingDetails = () => {
     const { register, handleSubmit, reset } = useForm();
@@ -22,7 +23,7 @@ const BillingDetails = () => {
             item.info = info
             item.email = email
 
-            fetch(`http://localhost:5000/order/${email}`, {
+            fetch(`${httpLink}/order/${email}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -35,7 +36,7 @@ const BillingDetails = () => {
         })
 
 
-        fetch(`http://localhost:5000/cart/${email}`, {
+        fetch(`${httpLink}/cart/${email}`, {
             method: 'PUT',
             headers: {
                 'content-Type': 'application/json',

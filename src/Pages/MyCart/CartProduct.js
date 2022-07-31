@@ -2,6 +2,7 @@ import React from 'react';
 import { ImCancelCircle } from "react-icons/im";
 import { useDispatch, useSelector } from 'react-redux';
 import { setCart } from '../../Redux/Actions/cartActions';
+import httpLink from '../../ServerLink/serverLink';
 
 
 const CartProduct = ({ cart }) => {
@@ -14,7 +15,7 @@ const CartProduct = ({ cart }) => {
     const removeTools = (id) => {
         const filredTools = carts?.filter(tool => tool["_id"] !== id)
 
-        fetch(`http://localhost:5000/cart/${user.email}`, {
+        fetch(`${httpLink}/cart/${user.email}`, {
             method: 'PUT',
             headers: {
                 'content-Type': 'application/json',
@@ -23,7 +24,7 @@ const CartProduct = ({ cart }) => {
         })
             .then(res => res.json())
             .then(data => {
-                fetch(`http://localhost:5000/cart/${user?.email}`).then(res => res.json()).then(data => dispatch(setCart(data.cart)))
+                fetch(`${httpLink}/cart/${user?.email}`).then(res => res.json()).then(data => dispatch(setCart(data.cart)))
             })
 
     }

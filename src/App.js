@@ -17,6 +17,7 @@ import { setUserInfo, setUserRole, setUserBillingInfo, setUserShipingInfo } from
 import { setTools } from './Redux/Actions/toolsActions';
 import { setCart } from './Redux/Actions/cartActions';
 import { useEffect } from 'react';
+import httpLink from './ServerLink/serverLink';
 
 function App() {
   const dispatch = useDispatch();
@@ -24,9 +25,9 @@ function App() {
   const role = useSelector(state => state.role);
   console.log(role)
   useEffect(() => {
-    fetch('http://localhost:5000/tools').then(res => res.json()).then(data => dispatch(setTools(data))).catch(err => console.log(err))
-    fetch(`http://localhost:5000/cart/${user?.email}`).then(res => res.json()).then(data => dispatch(setCart(data.cart))).catch(err => console.log(err))
-    fetch(`http://localhost:5000/user/${user?.email}`).then(res => res.json()).then(data => {
+    fetch(`${httpLink}/tools`).then(res => res.json()).then(data => dispatch(setTools(data))).catch(err => console.log(err))
+    fetch(`${httpLink}/cart/${user?.email}`).then(res => res.json()).then(data => dispatch(setCart(data.cart))).catch(err => console.log(err))
+    fetch(`${httpLink}/user/${user?.email}`).then(res => res.json()).then(data => {
       dispatch(setUserBillingInfo(data.bill))
       dispatch(setUserShipingInfo(data.shipping))
       dispatch(setUserRole(data.role))

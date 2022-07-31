@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import httpLink from "../ServerLink/serverLink"
 
 const useRole = user=>{
     const [role, setRole]=useState(false)
@@ -6,7 +7,7 @@ const useRole = user=>{
 
     useEffect(()=>{
         const email = user?.email
-        fetch(`http://localhost:5000/role/${email}`,{
+        fetch(`${httpLink}/role/${email}`,{
             method: 'GET',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
