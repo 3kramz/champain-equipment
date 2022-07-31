@@ -9,13 +9,12 @@ const Navbar = () => {
 
     const user = useSelector(state => state.user)
     const role = useSelector(state => state.role)
-    const carts = useSelector(state => state.cart)
-
+  
     const li = <>
         <li><NavLink to="/home">HOME</NavLink></li>
         <li><Link to="/home#services">SERVICES</Link></li>
         <li>{user ? <NavLink to="/dashboard">DESHBOARD</NavLink> : <NavLink to="/login">LOGIN</NavLink>}</li>
-        <li>{role === 'user' && <NavLink className='flex gap-3 items-center relative' to="/cart "> <span className='absolute text-xs top-[4px] left-[25px] bg-black rounded-lg px-1 text-white'>{carts.length}</span><AiOutlineShoppingCart /> Cart </NavLink>}</li>
+        <li>{role === 'user' && <NavLink className='flex gap-3 items-center relative' to="/cart"> <AiOutlineShoppingCart /> Cart </NavLink>}</li>
     </>
 
 

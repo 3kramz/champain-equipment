@@ -14,30 +14,33 @@ const ProductDetailsModal = ({ tool, setIsOpen }) => {
     const dispatch = useDispatch()
 
     const addToCart = tool => {
-        
-        const filredTools = cart?.filter(tool => tool["_id"] === _id)
-        if (filredTools.length===0) {
-            cart.push(tool)
-       
-            fetch(`${httpLink}/cart/${user.email}`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(cart),
-            })
-            .then(res => res.json())
-            .then(data => {
-                
+        console.log(user)
+        if (user) {
+            const filredTools = cart?.filter(tool => tool["_id"] === _id)
+            if (filredTools.length === 0) {
+                cart.push(tool)
+
+                fetch(`${httpLink}/cart/${user.email}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(cart),
+                })
+                    .then(res => res.json())
+                    .then(data => {
+
                         dispatch(setCart(cart))
-                        
+
                     })
-                .catch(err => console.log(err))
+                    .catch(err => console.log(err))
+            }
+            else {
+                swal("Tools ", "Already Added to cart", "warning");
+            }
+
         }
-        else {
-            swal("Tools ", "Already Added to cart", "warning");
-        }
-        
+        else { swal("Error", "You have to log in first to add tool", "error"); }
         setIsOpen(false)
 
     }
