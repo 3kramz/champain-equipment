@@ -24,7 +24,7 @@ const MyReviews = () => {
             <form className='md:w-2/4 w-full mt-6' onSubmit={handleSubmit(onSubmit)}>
                 <div>
                     <label className='font-medium' htmlFor="">Order ID</label>
-                    <input className='border focas:border-scale2 py-4 pl-3 mt-1 w-full rounded-md' type="text" placeholder='Found in your order fom My order list'  {...register("order")} required />
+                    <input className='input input-bordered w-full pl-4 p-7 rounded-lg h-9 border mt-4' type="text" placeholder='Find  your order id fom My order list'  {...register("order")} required />
                 </div>
                 <button className='btn btn-primary py-3 w-[130px] font-medium text-white rounded-md mt-6'>Track</button>
             </form>

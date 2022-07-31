@@ -10,3 +10,4 @@ export const SET_CART_INFO = "SET_CART_INFO"
 
 
 export const SET_ORDER_INFO = "SET_ORDER_INFO"
+export const SET_ALL_ORDER_INFO = "SET_ALL_ORDER_INFO"
