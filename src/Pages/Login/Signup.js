@@ -99,7 +99,7 @@ const Signup = () => {
                                 <input
                                     type="password"
                                     placeholder="Password"
-                                    className="input input-bordered w-full max-w-xs"
+                                    className="input input-bordered"
                                     {...register("password", {
                                         required: {
                                             value: true,
@@ -121,6 +121,7 @@ const Signup = () => {
                               
                             </div>
                         </form>
+                        <small>Admin Credentials is given in README.md file in the root directory of github repository</small>
                         <p><small>Already have an account? <Link className='text-secondary font-bold' to="/login">Log In</Link></small></p>
                     </div>
                 </div>

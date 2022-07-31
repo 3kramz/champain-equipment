@@ -5,6 +5,7 @@ import auth from '../../firebase.init';
 import Loading from '../../Components/Loading'
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import swal from 'sweetalert';
+import { toast } from 'react-toastify';
 
 
 
@@ -24,6 +25,7 @@ const Login = () => {
 
     return (
         <div class="hero h-screen bg-[url(https://i.ibb.co/3SmRc1y/banner.webp)]">
+            {toast('Admin Credentials is given in README.md file in the root directory of github repository')}
             <div class="hero-content flex-col ">
                 <div class="text-center lg:text-center">
                     <h1 class="text-5xl font-bold text-white">Login now!</h1>
@@ -65,7 +67,7 @@ const Login = () => {
                                 <input
                                     type="password"
                                     placeholder="Password"
-                                    className="input input-bordered w-full max-w-xs"
+                                    className="input input-bordered "
                                     {...register("password", {
                                         required: {
                                             value: true,
@@ -87,6 +89,7 @@ const Login = () => {
 
                             </div>
                         </form>
+                       <small>Admin Credentials is given in README.md file in the root directory of github repository</small>
                         <p><small>New to Champion? <Link className='text-secondary font-bold' to="/signup"> Create Account </Link></small></p>
                     </div>
                 </div>
