@@ -13,7 +13,7 @@ const ProductDetailsModal = ({ tool, setIsOpen }) => {
     const dispatch = useDispatch()
 
     const addToCart = tool => {
-       console.log(cart)
+        
         const filredTools = cart?.filter(tool => tool["_id"] === _id)
         if (filredTools.length===0) {
             cart.push(tool)
@@ -40,7 +40,6 @@ const ProductDetailsModal = ({ tool, setIsOpen }) => {
         setIsOpen(false)
 
     }
-    //  dispatch(setCart(data.cart))
 
     return (
         <>

@@ -18,7 +18,6 @@ const MyCart = () => {
     const area = useSelector(state => state.shipping);
 
     let subtotal = 0
-
     carts.forEach(element => { subtotal = subtotal + parseFloat(element.price) });
 
     const clearCart = () => {

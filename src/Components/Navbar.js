@@ -2,26 +2,22 @@ import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import Logo from './Logo'
-import { useAuthState } from 'react-firebase-hooks/auth';
-import auth from "../firebase.init"
-import Loading from './Loading';
 import { useSelector } from 'react-redux';
 
 
 const Navbar = () => {
-    const [user, loading] = useAuthState(auth);
+
+    const user = useSelector(state => state.user)
+    const role = useSelector(state => state.role)
     const carts = useSelector(state => state.cart)
 
     const li = <>
         <li><NavLink to="/home">HOME</NavLink></li>
         <li><Link to="/home#services">SERVICES</Link></li>
         <li>{user ? <NavLink to="/dashboard">DESHBOARD</NavLink> : <NavLink to="/login">LOGIN</NavLink>}</li>
-        <li>{user && <NavLink className='flex gap-3 items-center relative' to="/cart "> <span className='absolute text-xs top-[4px] left-[25px] bg-black rounded-lg px-1 text-white'>{carts.length}</span><AiOutlineShoppingCart /> Cart </NavLink>}
-         </li>
-    
+        <li>{role === 'user' && <NavLink className='flex gap-3 items-center relative' to="/cart "> <span className='absolute text-xs top-[4px] left-[25px] bg-black rounded-lg px-1 text-white'>{carts.length}</span><AiOutlineShoppingCart /> Cart </NavLink>}</li>
     </>
 
-if(loading){return <Loading/>}
 
     return (
         <div class="navbar bg-accent lg:px-12 nav-custom-font">
@@ -36,7 +32,7 @@ if(loading){return <Loading/>}
                 </div>
                 <NavLink to="/" class="btn btn-ghost normal-case text-xl">
                     {Logo}
-                    </NavLink>
+                </NavLink>
             </div>
             <div class="navbar-end hidden lg:flex">
                 <ul class="menu menu-horizontal p-0 ">
