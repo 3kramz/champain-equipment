@@ -13,10 +13,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - browse: http://localhost:3000 for seeing main application views
 
 
-# credentials
+# Admin credentials
 
- Email - admin@admin.com
- Password - 123456 
+ - Email - admin@admin.com
+ - Password - 123456 
 
 # Features
 
