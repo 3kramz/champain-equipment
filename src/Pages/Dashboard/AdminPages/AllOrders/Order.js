@@ -25,7 +25,7 @@ const Order = ({ order, index }) => {
                 <th>{index + 1}</th>
                 <td>{info["first-name"]}</td>
                 <td>{name}</td>
-                <td><label onClick={() => setIsOpen(true)} for={_id} className={`modal-button flex justify-center gap-3 btn btn-xs btn-${btnColour} btn-outline`}> {status}  </label></td>
+                <td><label onClick={() => setIsOpen(true)} htmlFor={_id} className={`modal-button flex justify-center gap-3 btn btn-xs btn-${btnColour} btn-outline`}> {status}  </label></td>
                 <td>{date}</td>
                 <td>{minOrder}</td>
                 <td>{info["address-lane"]}</td>

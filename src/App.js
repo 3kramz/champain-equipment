@@ -23,7 +23,7 @@ function App() {
   const dispatch = useDispatch();
   const [user, loading] = useAuthState(auth);
   const role = useSelector(state => state.role);
-  console.log(role)
+
   useEffect(() => {
     fetch(`${httpLink}/tools`).then(res => res.json()).then(data => dispatch(setTools(data))).catch(err => console.log(err))
     fetch(`${httpLink}/cart/${user?.email}`).then(res => res.json()).then(data => dispatch(setCart(data.cart))).catch(err => console.log(err))
@@ -44,18 +44,18 @@ function App() {
 
       <Routes>
         {/* ----------------------------   Public routes  ------------------------------------------ */}
-        {PublicRoutes.map(({ Component, path }) => <Route element={<Component />} path={path} />)}
+        {PublicRoutes.map(({ Component, path ,name}) => <Route key={name} element={<Component />} path={path} />)}
 
         <Route path="/dashboard" element={<Dashboard2 />}>
 
           {/* -----------------------------  Admin dashboard routes  ------------------------------------------ */}
-          {role === "admin" && AdminRoutes?.map(({ path, Component }) => <Route path={`${path}`} element={<RequireAdmin>< Component /></RequireAdmin>} />)}
+          {role === "admin" && AdminRoutes?.map(({ path, Component, name }) => <Route key={name} path={`${path}`} element={<RequireAdmin>< Component /></RequireAdmin>} />)}
 
           {/* -----------------------------  Private dashboard routes  ------------------------------------------ */}
-          {role === "user" && PrivateRoutes?.map(({ path, Component }) => <Route path={`${path}`} element={<RequireUser>< Component /></RequireUser>} />)}
+          {role === "user" && PrivateRoutes?.map(({ path, Component, name }) => <Route key={name} path={`${path}`} element={<RequireUser>< Component /></RequireUser>} />)}
         </Route>
         {/* -----------------------------  Private routes------------------------------------------ */}
-        {role === "user" && privateUserRoutes?.map(({ path, Component }) => <Route path={`${path}`} element={<RequireUser>< Component /></RequireUser>} />)}
+        {role === "user" && privateUserRoutes?.map(({ path, Component,name }) => <Route key={name} path={`${path}`} element={<RequireUser>< Component /></RequireUser>} />)}
       </Routes>
     </div>
   );

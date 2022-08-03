@@ -31,7 +31,7 @@ const Product = ({ tool }) => {
                 <img className='w-[100px]' src={img} alt={name} />
             </td>
 
-            <td className="px-6 py-4">
+            <td className="px-6 py-4 font-bold">
                 {name}
             </td>
 
@@ -39,7 +39,7 @@ const Product = ({ tool }) => {
                 ${price}
             </td>
             <td className="px-6 py-4 text-scale1">
-                {sold} Unit
+                <span className='font-bold'>{sold}</span> Unit
             </td>
             <td className="px-6 py-4 ">
                 <button onClick={()=>handleDelete()} className='btn btn-outline bg-red'>Delete</button>

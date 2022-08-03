@@ -1,10 +1,18 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { setOrderInfo } from '../../../../Redux/Actions/orderActions';
+import httpLink from '../../../../ServerLink/serverLink';
 import OrderTr from './OrderTr';
 
 const MyOrders = () => {
 const orders = useSelector(state => state.order);
-
+const user = useSelector(state => state.user);
+const dispatch= useDispatch();
+useEffect(()=>{
+    fetch(`${httpLink}/order/${user.email}`).then(res => res.json())
+        .then(data =>dispatch(setOrderInfo(data)))
+        .catch(err => console.log(err))
+},[user,dispatch])
 
     return (
         <div>

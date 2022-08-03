@@ -27,12 +27,12 @@ const UpdateStatus = ({ order, setIsOpen }) => {
 
     return (
         <div>
-            <input type="checkbox" id={_id} class="modal-toggle" />
-            <div class="modal">
-                <div class="modal-box relative">
-                    <label for={_id} class="btn btn-sm btn-primary btn-circle absolute right-2 top-2">✕</label>
-                    <h3 class="text-2xl font-bold">{name}</h3>
-                    <h3 class=""> Current Order Status is - {status}</h3>
+            <input type="checkbox" id={_id} className="modal-toggle" />
+            <div className="modal">
+                <div className="modal-box relative">
+                    <label htmlFor={_id} className="btn btn-sm btn-primary btn-circle absolute right-2 top-2">✕</label>
+                    <h3 className="text-2xl font-bold">{name}</h3>
+                    <h3 className=""> Current Order Status is - {status}</h3>
 
                     <div className='flex gap-5 mt-5'>
                         <label onClick={() => handleUpdate("Unpaid")} className=" flex justify-center gap-3 btn btn-xs btn-error btn-outline "> Unpaid</label>

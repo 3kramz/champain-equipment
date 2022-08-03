@@ -5,11 +5,11 @@ import httpLink from '../../../../ServerLink/serverLink';
 
 const MyReviews = () => {
 
-    const { register, handleSubmit} = useForm();
+    const { register, handleSubmit, reset} = useForm();
     const onSubmit = info => {
 // console.log(data)
         fetch(fetch(`${httpLink}/order-status/${info.order}`).then(res => res.json())
-        .then(data =>{swal(`${data.status}`, `your order status is ${data.status}`, )})
+        .then(data =>{swal(`Track Order`, `Your order status is ${data.status}`,"success" ); reset()})
         .catch(err => console.log(err)))
 
     }

@@ -40,17 +40,17 @@ const BillingModals = ({ setIsOpen }) => {
 
     return (
         <div >
-            <input type="checkbox" id="my-modal" class="modal-toggle" />
-            <div class="modal">
-                <div class="modal-box ">
-                    <label for="my-modal" class="btn btn-sm btn-primary btn-circle absolute right-2 top-2">✕</label>
-                    <h3 class="font-bold text-lg">Edit Billing Address</h3>
+            <input type="checkbox" id="my-modal" className="modal-toggle" />
+            <div className="modal">
+                <div className="modal-box ">
+                    <label htmlFor="my-modal" className="btn btn-sm btn-primary btn-circle absolute right-2 top-2">✕</label>
+                    <h3 className="font-bold text-lg">Edit Billing Address</h3>
 
                     <form onSubmit={handleSubmit(onSubmit)}>
 
-                        <div class="form-control">
-                            <label class="label">
-                                <span class="label-text">Lane</span>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Lane</span>
                             </label>
                             <input
                                 type="text"
@@ -61,7 +61,7 @@ const BillingModals = ({ setIsOpen }) => {
                                         message: 'lane is required'
                                     }
                                 })}
-                                class="input input-bordered" />
+                                className="input input-bordered" />
 
                             <label className="label">
                                 {errors.lane && <span className="label-text-alt text-error">This field is required</span>}
@@ -70,9 +70,9 @@ const BillingModals = ({ setIsOpen }) => {
                         </div>
 
 
-                        <div class="form-control">
-                            <label class="label">
-                                <span class="label-text">Area</span>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Area</span>
                             </label>
                             <input
                                 type="text"
@@ -83,7 +83,7 @@ const BillingModals = ({ setIsOpen }) => {
                                         message: 'area is required'
                                     }
                                 })}
-                                class="input input-bordered" />
+                                className="input input-bordered" />
 
                             <label className="label">
                                 {errors.lane && <span className="label-text-alt text-error">This field is required</span>}
@@ -92,9 +92,9 @@ const BillingModals = ({ setIsOpen }) => {
                         </div>
 
 
-                        <div class="form-control">
-                            <label class="label">
-                                <span class="label-text">City</span>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">City</span>
                             </label>
                             <input
                                 type="text"
@@ -105,15 +105,15 @@ const BillingModals = ({ setIsOpen }) => {
                                         message: 'city is required'
                                     }
                                 })}
-                                class="input input-bordered" />
+                                className="input input-bordered" />
                             <label className="label">
                                 {errors.city && <span className="label-text-alt text-error">This field is required</span>}
                             </label>
                         </div>
 
-                        <div class="form-control">
-                            <label class="label">
-                                <span class="label-text">State</span>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">State</span>
                             </label>
                             <input
                                 type="text"
@@ -124,15 +124,15 @@ const BillingModals = ({ setIsOpen }) => {
                                         message: 'state is required'
                                     }
                                 })}
-                                class="input input-bordered" />
+                                className="input input-bordered" />
                             <label className="label">
                                 {errors.city && <span className="label-text-alt text-error">This field is required</span>}
                             </label>
                         </div>
 
-                        <div class="form-control">
-                            <label class="label">
-                                <span class="label-text">Country</span>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Country</span>
                             </label>
                             <input
                                 type="text"
@@ -143,16 +143,16 @@ const BillingModals = ({ setIsOpen }) => {
                                         message: 'Country is required'
                                     }
                                 })}
-                                class="input input-bordered" />
+                                className="input input-bordered" />
                             <label className="label">
                                 {errors.city && <span className="label-text-alt text-error">This field is required</span>}
                             </label>
                         </div>
 
 
-                        <div class="modal-action form-control mt-6">
-                            <input type="submit" value="Update" for="my-modal" className="btn btn-primary text-white" />
-                            {/* <label for="my-modal" class="btn btn-primary">Update</label> */}
+                        <div className="modal-action form-control mt-6">
+                            <input type="submit" value="Update" htmlFor="my-modal" className="btn btn-primary text-white" />
+                            {/* <label htmlFor="my-modal" className="btn btn-primary">Update</label> */}
                         </div>
                     </form>
 

@@ -7,7 +7,7 @@ const OrderTr = ({order}) => {
             case "Unpaid": return "error"
             case "Paid": return "secondary"
             case "Shifted": return "success"
-            case "Delivared": return "success"
+            case "Delivared": return "primary"
             case "Order Canceled": return "error"
             default: return "warning"
         }

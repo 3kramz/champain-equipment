@@ -24,20 +24,20 @@ const Login = () => {
     if (user) return <Navigate to="/" replace={true} />
 
     return (
-        <div class="hero h-screen bg-[url(https://i.ibb.co/3SmRc1y/banner.webp)]">
+        <div className="hero h-screen bg-[url(https://i.ibb.co/3SmRc1y/banner.webp)]">
             {toast('Admin Credentials is given in README.md file in the root directory of github repository')}
-            <div class="hero-content flex-col ">
-                <div class="text-center lg:text-center">
-                    <h1 class="text-5xl font-bold text-white">Login now!</h1>
+            <div className="hero-content flex-col ">
+                <div className="text-center lg:text-center">
+                    <h1 className="text-5xl font-bold text-white">Login now!</h1>
                 </div>
-                <div class="card  w-full  bg-base-100">
-                    <div class="card-body">
+                <div className="card  w-full  bg-base-100">
+                    <div className="card-body">
 
                         <form onSubmit={handleSubmit(onSubmit)}>
 
-                            <div class="form-control">
-                                <label class="label">
-                                    <span class="label-text">Email</span>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Email</span>
                                 </label>
                                 <input
                                     type="email"
@@ -52,7 +52,7 @@ const Login = () => {
                                             message: 'Provide a valid Email'
                                         }
                                     })}
-                                    class="input input-bordered" />
+                                    className="input input-bordered" />
 
                                 <label className="label">
                                     {errors.email && <span className="label-text-alt text-error">This field is required</span>}
@@ -60,9 +60,9 @@ const Login = () => {
                                 </label>
                             </div>
 
-                            <div class="form-control">
-                                <label class="label">
-                                    <span class="label-text">Password</span>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Password</span>
                                 </label>
                                 <input
                                     type="password"
@@ -84,7 +84,7 @@ const Login = () => {
 
                                 </label>
                             </div>
-                            <div class="form-control mt-6">
+                            <div className="form-control mt-6">
                                 <input type="submit" value="Login" className="btn btn-primary text-white" />
 
                             </div>

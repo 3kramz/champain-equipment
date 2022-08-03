@@ -48,9 +48,9 @@ const ProductDetailsModal = ({ tool, setIsOpen }) => {
     return (
         <>
 
-            <input type="checkbox" id={_id} class="modal-toggle" />
-            <div class="modal ">
-                <div class="modal-box w-11/12 max-w-7xl">
+            <input type="checkbox" id={_id} className="modal-toggle" />
+            <div className="modal ">
+                <div className="modal-box w-11/12 max-w-7xl">
                     <div className="lg:flex my-5 ">
                         <div className="border  border-[#E5E5E5] rounded lg:w-1/2 my-5">
                             <img src={img} alt="" className="mx-auto object-cover "
@@ -69,9 +69,9 @@ const ProductDetailsModal = ({ tool, setIsOpen }) => {
                                 <p className='text-xl font-bold'>${price} per/unit <span className='text-sm font-medium'> ( {minOrder} min order)</span></p>
                                 <p className='text-xl '>{description}</p>
                             </div>
-                            <div class="flex justify-between font-main text-base font-medium text-white mt-10">
-                                <label for={_id} class=" flex justify-center gap-3 btn btn-wide btn-sm btn-outline hover:text-white  hover:bg-black"> <HiArrowLeft />Close</label>
-                                <label onClick={() => { addToCart(tool) }} class=" flex justify-center gap-3 btn btn-wide btn-sm btn-primary hover:text-black hover:bg-accent"><AiOutlineShoppingCart /> Add to Cart</label>
+                            <div className="flex justify-between font-main text-base font-medium text-white mt-10">
+                                <label htmlFor={_id} className=" flex justify-center gap-3 btn btn-wide btn-sm btn-outline hover:text-white  hover:bg-black"> <HiArrowLeft />Close</label>
+                                <label onClick={() => { addToCart(tool) }} className=" flex justify-center gap-3 btn btn-wide btn-sm btn-primary hover:text-black hover:bg-accent"><AiOutlineShoppingCart /> Add to Cart</label>
                             </div>
                         </div>
                     </div>

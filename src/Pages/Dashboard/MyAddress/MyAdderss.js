@@ -19,7 +19,7 @@ const MyAddress = () => {
                     <p>{bill.city}</p>
                     <p>{bill.State}</p>
                     <p>{bill.country}</p>
-                    <label onClick={() => setIsOpenBilling(true)} for="my-modal" class=" modal-button text-[#3BB77E] mt-2 hover:text-yellow-600">Edit</label>
+                    <label onClick={() => setIsOpenBilling(true)} htmlFor="my-modal" className=" modal-button text-[#3BB77E] mt-2 hover:text-yellow-600">Edit</label>
 
                 </div>
             </div>
@@ -33,7 +33,7 @@ const MyAddress = () => {
                     <p>{Shipping.State}</p>
                     <p>{Shipping.phone}</p>
                     <p>{Shipping.country}</p>
-                    <label onClick={() => setIsOpenShipping(true)} for="my-modal" class=" modal-button text-[#3BB77E] mt-2 hover:text-yellow-600">Edit</label>
+                    <label onClick={() => setIsOpenShipping(true)} htmlFor="my-modal" className=" modal-button text-[#3BB77E] mt-2 hover:text-yellow-600">Edit</label>
                 </div>
             </div>
             {isOpenBilling && <BillingModals setIsOpen={setIsOpenBilling} />}

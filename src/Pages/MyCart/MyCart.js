@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from 'react-router-dom'
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { BiCheckbox } from "react-icons/bi";
@@ -17,6 +17,14 @@ const MyCart = () => {
     const user = useSelector(state => state.user);
     const carts = useSelector(state => state.cart)
     const area = useSelector(state => state.shipping);
+
+
+    useEffect(() => {
+        fetch(`${httpLink}/cart/${user?.email}`).then(res => res.json()).then(data => dispatch(setCart(data.cart))).catch(err => console.log(err))
+    }, [user,dispatch])
+
+
+
 
     let subtotal = 0
     carts.forEach(element => { subtotal = subtotal + parseFloat(element.price) });

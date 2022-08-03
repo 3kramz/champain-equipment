@@ -8,12 +8,12 @@ const Tool = ({ tool }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div class="card w-96 ">
+        <div className="card w-96 ">
             <figure>
                 <img className='h-[250px] ' src={img} alt="Shoes" />
             </figure>
-            <div class="card-body">
-                <h2 class="card-title">{name}</h2>
+            <div className="card-body">
+                <h2 className="card-title">{name}</h2>
 
                 <p><span className="font-bold">Price:</span> {price} per/unit</p>
 
@@ -26,8 +26,8 @@ const Tool = ({ tool }) => {
                     />
                     <p className='mt-1 ml-2 text-sm'> ({ratings})</p>
                 </div>
-                <div class="card-actions justify-start">
-                    <label onClick={()=>setIsOpen(true)} for={_id} class=" modal-button btn btn-wide btn-sm btn-outline btn-primary">Details</label>
+                <div className="card-actions justify-start">
+                    <label onClick={()=>setIsOpen(true)} htmlFor={_id} className=" modal-button btn btn-wide btn-sm btn-outline btn-primary">Details</label>
                 </div>
             </div>
             {isOpen && <ProductDetailsModal tool={tool} setIsOpen={setIsOpen}/>}

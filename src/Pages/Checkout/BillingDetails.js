@@ -55,10 +55,10 @@ const BillingDetails = () => {
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className='lg:flex gap-5'>
                     <div className='py-1'>
-                        <input class="input input-bordered w-full pl-4 p-7 rounded-lg h-9 border" type="text" placeholder='First name*' {...register("first-name")} required />
+                        <input className="input input-bordered w-full pl-4 p-7 rounded-lg h-9 border" type="text" placeholder='First name*' {...register("first-name")} required />
                     </div>
                     <div className='py-1'>
-                        <input class="input input-bordered w-full pl-4 p-7 rounded-lg h-9 border" type="text" placeholder='Last name*' {...register("last-name")} required />
+                        <input className="input input-bordered w-full pl-4 p-7 rounded-lg h-9 border" type="text" placeholder='Last name*' {...register("last-name")} required />
 
                     </div>
                 </div>
@@ -98,10 +98,10 @@ const BillingDetails = () => {
                         <h1 className='heading-4 mb-5'>Payment</h1>
 
                         <input type="radio" id="bank" name="payment" value="bank" />
-                        <label className='pl-4' for="bank">Direct Bank Transfer</label><br />
+                        <label className='pl-4' htmlFor="bank">Direct Bank Transfer</label><br />
 
                         <input type="radio" id="cash" name="payment" value="cash" />
-                        <label className='pl-4' for="cash">Cash on delivery</label><br />
+                        <label className='pl-4' htmlFor="cash">Cash on delivery</label><br />
 
                         <input onClick={(e) => handleSubmit(e)} className='bg-textHeading text-white  hover:bg-accent hover:text-black ease-in duration-300 rounded-lg my-10 w-40 h-12' type="submit" value="Place an order" />
 

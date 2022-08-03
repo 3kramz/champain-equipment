@@ -4,7 +4,6 @@ import { useSelector } from "react-redux"
 
 const Tools = () => {
     const tools = useSelector(state => state.tools)
-
     tools.length = 6
 
     return (
